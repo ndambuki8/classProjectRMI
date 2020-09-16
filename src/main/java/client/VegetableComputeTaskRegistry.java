@@ -17,10 +17,8 @@ public class VegetableComputeTaskRegistry {
             String name = "vegetable";
             Registry registry = LocateRegistry.getRegistry();
             Compute comp = (Compute) registry.lookup(name);
-//            Pi task = new Pi(Integer.parseInt(args[1]));
-//            BigDecimal pi = comp.executeTask(task);
-//            System.out.println(pi);
-              AddVegetablePrice task = new AddVegetablePrice();
+
+            AddVegetablePrice task = new AddVegetablePrice();
               VegetableHelper add = comp.executeTask(task);
               System.out.println(add);
               

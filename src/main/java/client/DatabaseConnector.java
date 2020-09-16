@@ -22,16 +22,16 @@ public class DatabaseConnector {
         
         String n = veg.getName();
         int p= veg.getPrice();
-//        String p = veg.getPrice();
+
         
         try {
-            //Connection to DB and store values we create table login
+            //Connection to DB and store values we create table veg
             Class.forName(DRIVER);
             Connection con=DriverManager.getConnection(URL,USER,PASSWORD);
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setString(1, n);
             ps.setInt(2, p);
-//              ps.setString(2,p);
+
             i = ps.executeUpdate();
         } catch (SQLException ex) {
             ex.printStackTrace();
